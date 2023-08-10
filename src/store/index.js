@@ -22,7 +22,7 @@ const store = createStore({
   },
   actions: {
     getCards({commit, state}, page) {
-        fetch(`http://flems.github.io/test/api/news/${page}`).then((response) => {
+        fetch(`https://flems.github.io/test/api/news/${page}`).then((response) => {
             response.json().then(json => {
                 console.log(json)
                 commit('addItems', json.items)
